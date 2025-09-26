@@ -15,12 +15,17 @@ function validateForm(){
   let email = document.getElementById("email").value;
   let telepon = document.getElementById("telepon").value;
   let pesan = document.getElementById("message").value;
+  let outputDiv = document.getElementById("hasilValidasi");
+  let hasil = "";
   
   if(name === "" || email === "" || telepon === "" || pesan === ""){
     alert('Please fill all the blank form!');
   } else{
-    alert('Thanks'+ name +'for Your Feedback!');
-  }
+    hasil = `Nama: ${name} Email Anda: ${email} No telepon: ${telepon} pesan: ${pesan}`;
+    hasil += `\n(Waktu: ${new Date().toLocaleString()})`; // Tambahkan waktu saat ini
+    alert('Thanks'+ name + 'for Your Feedback!');
+  };
+  outputDiv.innerText = hasil;
 };
 
 // animasi smooth scroll
