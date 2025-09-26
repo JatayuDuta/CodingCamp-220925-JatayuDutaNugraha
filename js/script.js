@@ -1,3 +1,14 @@
+// welcome user
+welcomeMessage();
+
+function welcomeMessage(){
+  let username = prompt("Enter your name:");
+  if (username){
+    document.getElementById("username").innerHTML=username;
+  } else{
+    alert('Welcome to my portofolio');
+  }
+};
 
 // animasi smooth scroll
 $('.page-scroll').on('click', function(e) {
