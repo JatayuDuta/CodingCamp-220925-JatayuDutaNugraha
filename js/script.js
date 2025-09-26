@@ -10,6 +10,19 @@ function welcomeMessage(){
   }
 };
 
+function validateForm(){
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let telepon = document.getElementById("telepon").value;
+  let pesan = document.getElementById("message").value;
+  
+  if(name === "" || email === "" || telepon === "" || pesan === ""){
+    alert('Please fill all the blank form!');
+  } else{
+    alert('Thanks'+ name +'for Your Feedback!');
+  }
+};
+
 // animasi smooth scroll
 $('.page-scroll').on('click', function(e) {
 
@@ -39,3 +52,4 @@ $(document).ready(function(){
     });
   });
 });
+
